@@ -41,6 +41,7 @@ Open daarna `http://localhost:3000`.
 
 - In fase 1 gebruiken we placeholder data. In vervolgstappen voegen we scraping en echte spelers-/blessuredata toe.
 - De SQLite database staat lokaal in `dev.db` (zie `.env`).
+- Het PSV-logo verwacht je in `public/psv-logo.svg` (transparant). Gebruik hiervoor bij voorkeur de officiële assets uit de PSV brand guidelines.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

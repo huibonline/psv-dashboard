@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,13 +13,17 @@ const navItems = [
   { href: "/blessures", label: "Blessures" },
 ] as const;
 
-function PsvMark() {
+function PsvLogo() {
   return (
-    <div
-      aria-hidden="true"
-      className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-[oklch(0.62_0.24_27)] to-[oklch(0.70_0.20_24)] text-background shadow-sm ring-1 ring-border"
-    >
-      <span className="text-sm font-bold tracking-tight">PSV</span>
+    <div className="grid h-11 w-11 place-items-center">
+      <Image
+        src="/psv-logo.svg"
+        alt="PSV Eindhoven logo"
+        width={44}
+        height={44}
+        priority
+        className="h-11 w-11 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
+      />
     </div>
   );
 }
@@ -30,7 +35,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <PsvMark />
+          <PsvLogo />
           <div className="leading-tight">
             <div className="flex items-center gap-2">
               <span className="text-base font-semibold tracking-tight">
