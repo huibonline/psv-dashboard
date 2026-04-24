@@ -1,3 +1,47 @@
+# PSV Dashboard
+
+Persoonlijke webapp (NL) om PSV Eindhoven nieuws en info op één plek te bundelen.
+
+## Tech stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Prisma + SQLite
+
+## Lokaal draaien
+
+Installeer dependencies:
+
+```bash
+npm install
+```
+
+Zet de database op (SQLite):
+
+```bash
+npx prisma migrate dev
+```
+
+Start de dev server:
+
+```bash
+npm run dev
+```
+
+Open daarna `http://localhost:3000`.
+
+## Pagina's (fase 1)
+
+- `/` — laatste nieuws (dummy cards)
+- `/selectie` — selectie (dummy spelerskaarten)
+- `/blessures` — blessures (dummy overzicht)
+
+## Notities
+
+- In fase 1 gebruiken we placeholder data. In vervolgstappen voegen we scraping en echte spelers-/blessuredata toe.
+- De SQLite database staat lokaal in `dev.db` (zie `.env`).
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
